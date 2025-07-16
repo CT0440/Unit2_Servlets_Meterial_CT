@@ -1,0 +1,86 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+         <servlet>
+        <servlet-name>HelloServlet_Web</servlet-name>
+        <servlet-class>mypack.HelloServlet_Web</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloServlet_Web</servlet-name>
+        <url-pattern>/greet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>ConfigXML</servlet-name>
+        <servlet-class>mypack.Config_init_web</servlet-class>
+        <init-param>
+            <param-name>trainer</param-name>
+            <param-value>Sruthi</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfigXML</servlet-name>
+        <url-pattern>/configxml</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+     <!-- Context Parameter -->
+    <context-param>
+        <param-name>Trainer</param-name>
+        <param-value>vaibhav</param-value>
+    </context-param>
+
+
+
+
+    <!-- Context1 -->
+    <servlet>
+        <servlet-name>Context1</servlet-name>
+        <servlet-class>mypack.Context1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Context1</servlet-name>
+        <url-pattern>/context1</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- Context2 -->
+ <servlet>
+    <servlet-name>Context2</servlet-name>
+    <servlet-class>mypack.Context2</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>Context2</servlet-name>
+    <url-pattern>/context2</url-pattern>
+</servlet-mapping>
+
+
+ <!-- Dispatcher1 Servlet -->
+    <servlet>
+    <servlet-name>Dispatcher1</servlet-name>
+    <servlet-class>mypack.Dispatcher1</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>Dispatcher1</servlet-name>
+    <url-pattern>/first</url-pattern>
+</servlet-mapping>
+
+
+    <!-- Dispatcher2 Servlet -->
+    <servlet>
+        <servlet-name>Dispatcher2</servlet-name>
+        <servlet-class>mypack.Dispatcher2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Dispatcher2</servlet-name>
+        <url-pattern>/second</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
